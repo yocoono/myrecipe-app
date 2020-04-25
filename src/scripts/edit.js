@@ -1,6 +1,7 @@
-import generateUuId from './uuid-v4'
-import { getSavedRecipes, saveRecipes, removeRecipe } from './functions'
-
+import generateUuId from '../uuid-v4'
+import { getSavedRecipes, saveRecipes, removeRecipe } from '../functions'
+import 'normalize.css/normalize.css'
+import '../styles/styles.scss'
 
 let recipes = getSavedRecipes()
 let recipeId = location.hash.substring(1)
