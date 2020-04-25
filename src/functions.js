@@ -13,8 +13,8 @@ const saveRecipes = (recipes) => {
   localStorage.setItem('recipes', JSON.stringify(recipes))
 }
 
-const removeRecipe = (id) => {
-  const rmRecipeIndex = recipes.findIndex(recipe => {
+const removeRecipe = (recipes, id) => {
+  let rmRecipeIndex = recipes.findIndex(recipe => {
     return recipe.id === id
   })
 

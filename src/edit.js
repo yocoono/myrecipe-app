@@ -86,7 +86,7 @@ bodyElement.addEventListener('input', e => {
 })
 
 rmBtn.addEventListener('click', e => {
-  removeRecipe(recipe.id)
+  removeRecipe(recipes, recipe.id)
   saveRecipes(recipes)
   location.assign('index.html')
 })
