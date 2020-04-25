@@ -1,13 +1,18 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
+// const MODE = "development";
+const MODE = "production";
+const enabledSourceMap = MODE === "development";
+
 module.exports = {
+  mode: MODE,
   entry: {
-    app: './src/app.js',
-    edit: './src/edit.js'
+    app: './src/scripts/app.js',
+    edit: './src/scripts/edit.js'
   },
   output: {
-    path: path.join(__dirname, 'public/scripts'),
+    path: path.join(__dirname, 'public/assets'),
     filename: '[name].js'
   },
   module: {
@@ -27,24 +32,28 @@ module.exports = {
         {
           loader: 'css-loader',
           options: {
-            sourceMap: true,
+            sourceMap: enabledSourceMap,
+            url: false
           },
-        },
-        {
+        }, {
           loader: 'sass-loader',
           options: {
-            sourceMap: true,
+            sourceMap: enabledSourceMap
           },
         },
       ],
-    },]
+    }, {
+      test: /\.(jpg|png|svg)$/,
+      exclude: /node_modules/,
+      loader: 'file-loader',
+    }]
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'styles.css',
     })
   ],
-  devtool: 'cheap-module-eval-source-map', // エラーの際にdeveloper toolで元ファイルと場所を教えてくれる
+  devtool: 'cheap-module-eval-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'public')
   }
