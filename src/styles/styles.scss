@@ -1,0 +1,324 @@
+// @import url("https://fonts.googleapis.com/css?family=Indie+Flower&display=swap");
+// @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+// @import url("https://fonts.googleapis.com/css?family=Neucha&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Pangolin&display=swap");
+
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+$color-white: #fff;
+$color-black: #000;
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+$font-family-deco: "Indie Flower", cursive;
+$font-family-simple: "Lato", sans-serif;
+$font-family-deco2: "Neucha", cursive;
+$font-family-deco3: "Pangolin", cursive;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  color: #55c57a;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: $font-family-deco3;
+  letter-spacing: 0.5px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+main {
+  width: 100%;
+  padding: 3rem;
+}
+
+footer {
+  padding: 3rem 0;
+  text-align: center;
+  color: $color-grey-dark-2;
+}
+
+.contents {
+  width: 96%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#recipes {
+  .element {
+    &,
+    &:link,
+    &:visited {
+      width: 100%;
+      display: block;
+      background-color: rgba($color-white, 0.8);
+      margin-bottom: 2rem;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      background-color: $color-grey-light-2;
+      color: $color-black;
+      border-radius: 3px;
+      clip-path: polygon(0 0, 95% 0%, 100% 25%, 100% 100%, 0 100%);
+      box-shadow: 0 3rem 8rem rgba($color-black, 0.2);
+      transition: all 0.2s ease-out;
+      h2 {
+        font-size: 2.4rem;
+      }
+    }
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4rem 8rem rgba($color-black, 0.2);
+    }
+    &:active {
+      transform: translateY(-1px);
+      box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
+    }
+  }
+}
+
+.recipe-status {
+  font-size: 1.8rem;
+  position: relative;
+  span {
+    padding-left: 2rem;
+  }
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 9px;
+    background: red;
+    border-radius: 50%;
+  }
+  &.some {
+    &::before {
+      background-color: yellowgreen;
+    }
+  }
+  &.all {
+    &::before {
+      background-color: orange;
+    }
+  }
+  &.none {
+    &::before {
+      background-color: skyblue;
+    }
+  }
+}
+
+.main-title {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+.sub-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.icon-add {
+  &::before {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 3rem;
+    height: 3rem;
+    background: url(../images/chef.svg) no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.search-box {
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    // border: 1px solid;
+    background: url(../images/magnifier.svg) no-repeat;
+    background-size: 50%;
+    background-position: center;
+  }
+}
+#search-text {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  background-color: $color-white;
+  border: 1px solid $color-grey-dark;
+  border-radius: 100px;
+  font-family: $font-family-deco3;
+  padding: 0 1.5rem 0 4.5rem;
+  height: 5rem;
+  line-height: 5rem;
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn {
+  &,
+  &:link,
+  &visited {
+    font-family: $font-family-deco3;
+    padding: 1rem 2.5rem;
+    font-size: 1.8rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.1s;
+    border-radius: 100px;
+    text-decoration: none;
+    display: inline-block;
+  }
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 1rem 1.5rem rgba($color-black, 0.2);
+  }
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+  &:focus {
+    outline: none;
+  }
+  &.orange {
+    background-color: $color-secondary-dark;
+    color: $color-white;
+  }
+  &.green {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+  &.grey {
+    // border: 1px solid $color-grey-dark;
+    color: $color-white;
+    background-color: $color-black;
+  }
+  &.width100 {
+    width: 100%;
+  }
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.recipe-main {
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    margin: 0 auto 2rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    font-family: $font-family-deco3;
+  }
+}
+
+#ingredients__list {
+  list-style: none;
+  li {
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid $color-grey-light-1;
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+      overflow: hidden;
+    }
+    input {
+      margin-right: 1rem;
+    }
+    span {
+      font-size: 2rem;
+    }
+    button {
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: $color-grey-dark-3;
+      padding: 1rem 2rem;
+      font-size: 1.4rem;
+      float: right;
+      line-height: 1;
+      background-color: $color-grey-light-2;
+      font-family: inherit;
+    }
+  }
+}
+
+.add-ingredient {
+  &__text {
+    font-size: 1.6rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid $color-grey-dark-2;
+    border-radius: 3px;
+    font-family: $font-family-deco3;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+  &__button {
+    font-family: inherit;
+    background: $color-primary;
+    color: $color-white;
+    border: none;
+    outline: none;
+    height: 4rem;
+    width: 8rem;
+    border-radius: 3px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 1rem 1.5rem rgba($color-black, 0.2);
+    }
+    &:active {
+      transform: translateY(-1px);
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    }
+  }
+}
+
+.margin-bottom-30 {
+  margin-bottom: 3rem;
+}
+
+.recipe-main {
+  input,
+  textarea {
+    border: 1px solid $color-grey-dark;
+    border-radius: 3px;
+  }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Recipe Edit</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="shortcut icon" href="favicons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="manifest" href="favicons/site.webmanifest">
+  <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#ff7730">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+  <main>
+    <div class="contents">
+      <div class="text-align-center">
+        <h1 class="sub-title icon-add">Edit My Recipe</h1>
+      </div>
+
+      <div class="recipe-main margin-bottom-30">
+        <input type="text" id="recipe-title" placeholder="recipe title">
+        <textarea name="recipe-body" id="recipe-body" cols="30" rows="10" placeholder="recipe description"></textarea>
+      </div>
+      <!--recipe-main -->
+
+      <div class="ingredients margin-bottom-30">
+        <h2 class="sub-title">Ingredients</h2>
+        <ul id="ingredients__list"></ul>
+
+        <form id="add-ingredient" class="add-ingredient">
+          <input type="text" placeholder="Add ingredient" class="add-ingredient__text" name="text">
+          <button class="add-ingredient__button">Add</button>
+        </form>
+      </div>
+      <!-- ingredients -->
+      <div class="text-align-center margin-bottom-30">
+        <a href="index.html" class="btn orange width100">Save and return to Home</a>
+      </div>
+
+      <div class="danger-zone">
+        <h2 class="sub-title">Danger zone</h2>
+        <button id="delete-recipe" class="btn grey">Delete recipe</button>
+      </div>
+
+    </div>
+    <!-- contents -->
+
+  </main>
+  <footer>
+    &copy; yocoono 2020
+  </footer>
+
+  <script src="./scripts/edit.js"></script>
+</body>
+
+</html>
