@@ -13,7 +13,7 @@ This app allows you to make recipe notes temporarily using the browser local sto
 
 ## Live Demo
 
-[Live Demo Link](https://yocosaka.github.io)
+[Live Demo Link](https://yocosaka.github.io/recipe/public/)
 
 
 ## Getting Started
