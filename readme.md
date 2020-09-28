@@ -1,6 +1,6 @@
 # RECIPE APP : for Learning JavaScript
 
-![screenshot](./screenshot.jpg)
+![screenshot](./screencapture.png)
 
 This app allows you to make recipe notes temporarily using the browser local storage.
 
