@@ -3,7 +3,7 @@
 ![screenshot](./screencapture.png)
 
 ## About the Project
-This project is based on the [The Modern JavaScript Bootcamp by Andrew Mead] (https://www.udemy.com/course/modern-javascript/).
+This project is based on the [The Modern JavaScript Bootcamp by Andrew Mead](https://www.udemy.com/course/modern-javascript/).
 With this recipe app, you can take some recipe notes in your local browser.
 
 ## Built With
